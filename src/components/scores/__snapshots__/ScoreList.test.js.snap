@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScoreList component renders a ScoreList 1`] = `
+<ul>
+  <li
+    key="taylor-24"
+  >
+    <Score
+      score={
+        Object {
+          "name": "taylor",
+          "score": 24,
+        }
+      }
+    />
+  </li>
+  <li
+    key="taylor-24"
+  >
+    <Score
+      score={
+        Object {
+          "name": "taylor",
+          "score": 24,
+        }
+      }
+    />
+  </li>
+  <li
+    key="taylor-24"
+  >
+    <Score
+      score={
+        Object {
+          "name": "taylor",
+          "score": 24,
+        }
+      }
+    />
+  </li>
+  <li
+    key="taylor-24"
+  >
+    <Score
+      score={
+        Object {
+          "name": "taylor",
+          "score": 24,
+        }
+      }
+    />
+  </li>
+</ul>
+`;
