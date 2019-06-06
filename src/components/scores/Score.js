@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 function Score({ score }) {
   const divStyle = {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    padding: '3px'
   };
 
   return (

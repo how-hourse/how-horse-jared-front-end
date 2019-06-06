@@ -6,12 +6,11 @@ exports[`Score component renders a Score 1`] = `
     Object {
       "display": "flex",
       "justifyContent": "space-between",
+      "padding": "3px",
     }
   }
 >
-  <p>
-    terran
-  </p>
+  <p />
   <p>
     200
   </p>

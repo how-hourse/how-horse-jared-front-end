@@ -3,15 +3,21 @@ import PropTypes from 'prop-types';
 import Score from './Score';
 
 function ScoreList({ scores }) {
+  const liStyle = {
+    padding: '0px'
+  };
   const scoreArr = scores.map(score => {
     return (
-      <li key={`${score.name}-${score.score}`}>
+      <li style={liStyle} key={`${score.name}-${score.score}`}>
         <Score score={score} />
       </li>
     );
   });
 
-  return <ul>{scoreArr}</ul>;
+  const listStyles = {
+    width: '50vw'
+  };
+  return <ol style={listStyles}>{scoreArr}</ol>;
 }
 
 ScoreList.propTypes = {

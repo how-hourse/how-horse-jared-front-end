@@ -12,7 +12,7 @@ export default function App() {
     <Router>
       <Switch>
         <Route exact path='/' component={SignIn} />
-        <Route exact path='/:player' component={FinishView} />
+        <Route path='/:player/:score' component={FinishView} />
       </Switch>
     </Router>
   );

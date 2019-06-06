@@ -1,9 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScoreList component renders a ScoreList 1`] = `
-<ul>
+<ol
+  style={
+    Object {
+      "width": "50vw",
+    }
+  }
+>
   <li
     key="taylor-24"
+    style={
+      Object {
+        "padding": "0px",
+      }
+    }
   >
     <Score
       score={
@@ -16,6 +27,11 @@ exports[`ScoreList component renders a ScoreList 1`] = `
   </li>
   <li
     key="taylor-24"
+    style={
+      Object {
+        "padding": "0px",
+      }
+    }
   >
     <Score
       score={
@@ -28,6 +44,11 @@ exports[`ScoreList component renders a ScoreList 1`] = `
   </li>
   <li
     key="taylor-24"
+    style={
+      Object {
+        "padding": "0px",
+      }
+    }
   >
     <Score
       score={
@@ -40,6 +61,11 @@ exports[`ScoreList component renders a ScoreList 1`] = `
   </li>
   <li
     key="taylor-24"
+    style={
+      Object {
+        "padding": "0px",
+      }
+    }
   >
     <Score
       score={
@@ -50,5 +76,5 @@ exports[`ScoreList component renders a ScoreList 1`] = `
       }
     />
   </li>
-</ul>
+</ol>
 `;
