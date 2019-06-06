@@ -18,6 +18,7 @@ export default class Finish extends PureComponent {
   }
 
   componentDidUpdate() {
+    // eslint-disable-next-line react/prop-types
     this.setState({ topScores: this.props.topTenScores, player: this.props.match.params.player });
   }
 
