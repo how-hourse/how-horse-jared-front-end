@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Game from './Game';
+import Finish from './Finish';
 import { getPlayer, getTopTenScores } from '../selectors/playerSelectors';
 import { fetchTopScores } from '../actions/scoreActions';
 
@@ -18,4 +18,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Game);
+)(Finish);
