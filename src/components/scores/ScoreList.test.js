@@ -23,7 +23,6 @@ describe('ScoreList component', () => {
       }
     ];
 
-
     const wrapper = shallow(<ScoreList scores={scoreArr}/>);
     expect(wrapper).toMatchSnapshot();
   });

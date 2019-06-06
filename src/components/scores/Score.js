@@ -9,7 +9,7 @@ function Score({ score }) {
 
   return (
     <div style={divStyle}>
-      <p>{score.name}</p>
+      <p>{score.user}</p>
       <p>{score.score}</p>
     </div>
   );

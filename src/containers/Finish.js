@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import ScoreList from '../components/scores/ScoreList';
 
 export default class Finish extends PureComponent {
   static propTypes = {
@@ -26,6 +27,7 @@ export default class Finish extends PureComponent {
 
     return (
       <>
+        <ScoreList scores={this.state.topScores} />
       </>
     );
   }
