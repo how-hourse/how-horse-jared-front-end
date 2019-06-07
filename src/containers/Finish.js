@@ -18,7 +18,7 @@ export default class Finish extends PureComponent {
 
   render() {
 
-    const { place } = this.props;
+    const { place, topTenScores } = this.props;
 
     const pageStyles = {
       display: 'flex',
@@ -32,11 +32,11 @@ export default class Finish extends PureComponent {
       <div style={pageStyles}>
         <section>
           <header>You scored {this.props.match.params.score} horses!!!</header>
-          <p>You're {place} all time!</p>
+          <p>You're {place + 1} all time!</p>
         </section>
         <section>
           <header>Top Scores</header>
-          <ScoreList scores={this.props.topTenScores} />
+          <ScoreList scores={topTenScores} />
         </section>
       </div>
     );
