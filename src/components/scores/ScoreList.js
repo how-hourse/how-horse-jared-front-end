@@ -6,9 +6,9 @@ function ScoreList({ scores }) {
   const liStyle = {
     padding: '0px'
   };
-  const scoreArr = scores.map(score => {
+  const scoreArr = scores.map((score, i) => {
     return (
-      <li style={liStyle} key={`${score.name}-${score.score}`}>
+      <li style={liStyle} key={`${score.name}-${score.score}-${i}`}>
         <Score score={score} />
       </li>
     );

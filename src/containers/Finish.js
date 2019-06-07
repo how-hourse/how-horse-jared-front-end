@@ -5,25 +5,35 @@ import ScoreList from '../components/scores/ScoreList';
 export default class Finish extends PureComponent {
   static propTypes = {
     fetch: PropTypes.func.isRequired,
-    topTenScores: PropTypes.array.isRequired
+    newScore: PropTypes.func.isRequired,
+    topTenScores: PropTypes.array.isRequired,
+    place: PropTypes.number
   };
 
-  state = {
-    score: '0',
-    topScores: [],
-    player: ''
-  };
+  // state = {
+  //   score: '0',
+  //   topScores: [],
+  //   player: '',
+  // };
 
   componentDidMount() {
     this.props.fetch();
+    this.props.newScore({ user: this.props.match.params.player, score: this.props.match.params.score });
   }
 
-  componentDidUpdate() {
-    // eslint-disable-next-line react/prop-types
-    this.setState({ topScores: this.props.topTenScores, player: this.props.match.params.player });
-  }
+  // componentDidUpdate() {
+  //   // eslint-disable-next-line react/prop-types
+  //   this.setState({ 
+  //     topScores: this.props.topTenScores, 
+  //     player: this.props.match.params.player, 
+  //     score: this.props.match.params.score,
+  //   });
+  // }
 
   render() {
+
+    const { place } = this.props;
+
     const pageStyles = {
       display: 'flex',
       flexDirection: 'column',
@@ -38,10 +48,11 @@ export default class Finish extends PureComponent {
       <div style={pageStyles}>
         <section>
           <header>You scored {this.props.match.params.score} horses!!!</header>
+          <p>You're {place} all time!</p>
         </section>
         <section>
           <header>Top Scores</header>
-          <ScoreList scores={this.state.topScores} />
+          <ScoreList scores={this.props.topTenScores} />
         </section>
       </div>
     );
