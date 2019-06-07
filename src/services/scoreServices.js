@@ -5,15 +5,9 @@ export const fetchTopTenScores = () => {
       if(!ok) throw 'Unable to fetch';
       return json;
     });
-  // .then(res => {
-  //   console.log(res);
-  //   return res;
-  // });
-
 };
 
 export const createNewScore = (score) => {
-  console.log(score);
   return fetch('http://ec2-54-244-23-29.us-west-2.compute.amazonaws.com:7890/api/v1/score/newscore', {
     method: 'POST',
     body: JSON.stringify(score), // data can be `string` or {object}!
@@ -24,11 +18,6 @@ export const createNewScore = (score) => {
     .then(([ok, json]) => {
       if(!ok) throw 'Unable to fetch';
       return json;
-    })
-    .then(res => {
-      console.log(res);
-      return res;
     });
-
 };
 

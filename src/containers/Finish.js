@@ -7,28 +7,14 @@ export default class Finish extends PureComponent {
     fetch: PropTypes.func.isRequired,
     newScore: PropTypes.func.isRequired,
     topTenScores: PropTypes.array.isRequired,
-    place: PropTypes.number
+    place: PropTypes.number,
+    match: PropTypes.object.isRequired
   };
-
-  // state = {
-  //   score: '0',
-  //   topScores: [],
-  //   player: '',
-  // };
 
   componentDidMount() {
     this.props.fetch();
     this.props.newScore({ user: this.props.match.params.player, score: this.props.match.params.score });
   }
-
-  // componentDidUpdate() {
-  //   // eslint-disable-next-line react/prop-types
-  //   this.setState({ 
-  //     topScores: this.props.topTenScores, 
-  //     player: this.props.match.params.player, 
-  //     score: this.props.match.params.score,
-  //   });
-  // }
 
   render() {
 
@@ -39,8 +25,6 @@ export default class Finish extends PureComponent {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-
-
       height: '100vh'
     };
 
